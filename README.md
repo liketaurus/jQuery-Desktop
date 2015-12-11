@@ -6,5 +6,5 @@
 * [Leopard Desktop with jQDock] (http://code.tutsplus.com/tutorials/leopard-desktop-with-jquery-using-jqdock--net-860)
 
 ##What's changed by me:
-* DatePicker is shown when clicked on clock in right top corner
+* DatePicker is shown when clicked on clock at right top corner
 
