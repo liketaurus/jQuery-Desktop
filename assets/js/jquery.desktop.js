@@ -20,6 +20,7 @@ var JQD = (function($, window, document, undefined) {
       //
       clock: function() {
         var clock = $('#clock');
+       
 
         if (!clock.length) {
           return;

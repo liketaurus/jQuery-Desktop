@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 <meta name="description" content="JavaScript desktop environment built with jQuery." />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <title>jQuery Desktop</title>
 <!--[if lt IE 7]>
 <script>
@@ -971,7 +973,7 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
     </div>
   </div>
   <div class="abs" id="bar_top">
-    <span class="float_right" id="clock"></span>
+      <span class="float_right" id="clock" onclick="$('#clock').datepicker('dialog', '',function(){},{ showButtonPanel: true },[$(window).width()-209 ,27]);"></span>
     <ul>
       <li>
         <a class="menu_trigger" href="#">jQuery Desktop</a>
