@@ -7,4 +7,7 @@
 
 ##What's changed by me:
 * DatePicker is shown when clicked on clock at right top corner
+* Current temperature in top bar
+    * detailed weather forecast opens in separate model dialog when user clicks on a temperature
+* draggable analog clock desktop widget
 
