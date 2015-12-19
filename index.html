@@ -6,6 +6,8 @@
 <meta name="description" content="JavaScript desktop environment built with jQuery." />
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <title>jQuery Desktop</title>
 <!--[if lt IE 7]>
 <script>
@@ -1073,6 +1075,9 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
       </li>
     </ul>
   </div>
+   
+    <div id="aboutBox" style="display:none;" title="About"><h2>JQuery Desktop</h2><hr/><p>Information about this project will be presented here</p></div> 
+    
   <div class="abs" id="bar_bottom">
     <a class="float_left" href="#" id="show_desktop" title="Show Desktop">
       <img src="assets/images/icons/icon_22_desktop.png" />
@@ -1103,13 +1108,21 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
         </a>
       </li>
     </ul>
-    <a class="float_right" href="http://www.firehost.com/?ref=spon_nsmith_desktop-sonspring" title="Secure Hosting">
-      <img src="assets/images/misc/firehost.png" />
+      <a class="float_right" title="About" onclick="{
+          
+              $('#aboutBox').dialog({modal:true,buttons:{Ok:function() 
+                      {
+                          $(this).dialog('close');
+                      }
+                  }
+              });
+          
+      }">
+          <span class="menu" >About</span>
     </a>
   </div>
-</div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+</div> 
+
 <script>
   !window.jQuery && document.write(unescape('%3Cscript src="assets/js/jquery.js"%3E%3C/script%3E'));
   !window.jQuery && document.write(unescape('%3Cscript src="assets/js/jquery.ui.js"%3E%3C/script%3E'));
