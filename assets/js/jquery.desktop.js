@@ -20,6 +20,27 @@ var JQD = (function($, window, document, undefined) {
       //
       clock: function() {
         var clock = $('#clock');
+        
+        var weather = $('#weather');
+        var city = "Kyiv";
+        var country = "Ukraine";
+        var temp;
+ 
+        $.ajax({
+           type: "GET",
+           url: "http://www.webservicex.net//globalweather.asmx/GetWeather?CityName=" + city + "&CountryName=" + country + "",
+           dataType: "xml",
+           success: function (xml) {                    
+
+                    var t= new String (new XMLSerializer().serializeToString(xml.documentElement));
+                    var begin =t.indexOf('F (');
+                    var end =t.indexOf('C)');
+                    t = t.substring(begin+3,end);
+                                         
+                    weather.html('&#32;,&#32;'+t+'&deg;C' );   
+                   
+        }
+    });
        
 
         if (!clock.length) {

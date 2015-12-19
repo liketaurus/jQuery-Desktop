@@ -972,7 +972,29 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
       <span class="abs ui-resizable-handle ui-resizable-se"></span>
     </div>
   </div>
+    
+<div id="clockW">   
+  <iframe id="clockobj" style="border:0;margin:0;padding:0;width:100px;height:100px;" 
+          src="http://www.clocktag.com/html5/m121.html"></iframe>
+  <center><p>...</p></center>
+</div>
+    
+<div id="dialog-message" title="Current Weather" style="display:none">
+       <iframe id="forecast_embed" frameborder="0" height="245" style="width:100%" 
+               src="http://forecast.io/embed/#lat=50.450100&lon=30.523400&name=Kyiv&units=uk"> 
+       </iframe> 
+</div>
+    
   <div class="abs" id="bar_top">
+      <span class="float_right" id="weather" onclick="
+          {
+              $('#dialog-message').dialog({width: 600,modal:true,buttons:{Ok:function() 
+                      {
+                          $(this).dialog('close');
+                      }
+                  }
+              });
+          }">&#32;,&#32;N/A </span> 
       <span class="float_right" id="clock" onclick="$('#clock').datepicker('dialog', '',function(){},{ showButtonPanel: true },[$(window).width()-209 ,27]);"></span>
     <ul>
       <li>
@@ -1091,6 +1113,10 @@ window.top.location = 'http://desktop.sonspring.com/ie.html';
 <script>
   !window.jQuery && document.write(unescape('%3Cscript src="assets/js/jquery.js"%3E%3C/script%3E'));
   !window.jQuery && document.write(unescape('%3Cscript src="assets/js/jquery.ui.js"%3E%3C/script%3E'));
+
+    $('#clockW').css({left:$(window).width()-150,top:100});
+    $('#clockW').draggable();
+
 </script>
 <script src="assets/js/jquery.desktop.js"></script>
 <script>
